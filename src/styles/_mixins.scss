@@ -1,0 +1,18 @@
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-center {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+@mixin item_button {
+  display: none;
+  color: #8d8d8d;
+  cursor: pointer;
+}
