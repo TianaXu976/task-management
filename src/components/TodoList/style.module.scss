@@ -1,0 +1,17 @@
+.container {
+  padding: 2% 0;
+}
+
+.lists {
+  display: flex;
+  justify-content: flex-start;
+  padding: 50px 20px;
+  margin: auto;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 200px;
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
