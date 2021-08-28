@@ -1,34 +1,33 @@
-@import '../../../../styles/mixins';
-@import '../../../../styles/variables';
+@import "../../../../styles/mixins";
+@import "../../../../styles/variables";
 
-
-    .item{
-        min-height: 50px;
-        width: 240px;
-        padding: 0 20px;
-        margin-bottom: 15px;
-        color: #2f363f;
-        @include flex-between;
-        .actions{
-          @include flex-between;
-          width: 50px;
-          &.hidden{
-            display: none;
-          }
-        }
-        .btn{
-          @include item_button;
-        }
-        &:hover .btn{
-          display: block;
-        }
-        input{
-          outline: none;
-          border: none; 
-          height: 30px;
-          padding: 0;      
-        }
+.item {
+  min-height: 50px;
+  width: 240px;
+  padding: 0 20px;
+  margin-bottom: 15px;
+  color: #2f363f;
+  @include flex-between;
+  .actions {
+    @include flex-between;
+    width: 50px;
+    &.hidden {
+      display: none;
     }
+  }
+  .btn {
+    @include item_button;
+  }
+  &:hover .btn {
+    display: block;
+  }
+  input {
+    outline: none;
+    border: none;
+    height: 30px;
+    padding: 0;
+  }
+}
 
 $types: (
   red: (
@@ -45,15 +44,12 @@ $types: (
   ),
 );
 
-
-
-
 @each $status, $styles in $types {
-    .#{$status} {     
-        background-color: map-get($styles, item-color);
-        input{
-          border-bottom: map-get($styles, input-underline) 1px solid;
-          background-color: map-get($styles, item-color);
-        }
+  .#{$status} {
+    background-color: map-get($styles, item-color);
+    input {
+      border-bottom: map-get($styles, input-underline) 1px solid;
+      background-color: map-get($styles, item-color);
     }
+  }
 }

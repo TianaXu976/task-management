@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import classnames from "classnames/bind";
 import styles from "./style.module.scss";
+import PropTypes from "prop-types";
 
 // components
 import ColorButton from "./ColorButton";
@@ -12,6 +13,10 @@ import { v4 as uuidv4 } from "uuid";
 import { LIST_ACTION } from "../../TodoList/useTaskReducer";
 
 const cx = classnames.bind(styles);
+
+AddList.propTypes = {
+  taskDispatch: PropTypes.func,
+};
 
 const colorList = ["red", "yellow", "green"];
 
@@ -55,6 +60,7 @@ export default function AddList({ taskDispatch }) {
           ref={inputRef}
           onBlur={() => (inputRef.current.value = "")}
         />
+        
       </form>
     </div>
   );

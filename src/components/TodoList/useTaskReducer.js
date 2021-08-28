@@ -28,7 +28,6 @@ const taskReducer = (taskInfo, action) => {
       return action.payload;
 
     case LIST_ACTION.ADD_LIST:
-      console.log('addlist')
       return {
         allList: [...taskInfo.allList, action.payload],
         tasks: { ...taskInfo.tasks, [action.payload.listId]: [] },

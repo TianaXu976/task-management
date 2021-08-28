@@ -6,6 +6,7 @@ import styles from "./style.module.scss";
 import Clock from "../base/Clock";
 import AddList from "../base/AddList";
 import Panel from "@/components/base/Panel";
+import SaveButton from "../base/SaveButton"
 
 // lib
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
@@ -16,10 +17,10 @@ import useTaskReducer, { TASK_ACTION, LIST_ACTION } from "./useTaskReducer";
 const cx = classnames.bind(styles);
 
 function TodoList() {
-  const [ taskInfo, taskDispatch ] = useTaskReducer();
+  const [taskInfo, taskDispatch] = useTaskReducer();
   // const [taskInfo, taskDispatch] = useReducer(taskReducer, initialState);
 
-  console.log(taskInfo);
+  // console.log(taskInfo);
 
   const onDragEnd = (dragInfo) => {
     const { destination, source, type } = dragInfo;
@@ -89,11 +90,11 @@ function TodoList() {
       type: LIST_ACTION.INITIAL_STATE,
       payload: JSON.parse(localStorage.getItem("board")),
     });
-  }, []);
+  }, [taskDispatch]);
 
   return (
     <div className={cx("container")}>
-      <AddList taskDispatch={taskDispatch}/>
+      <AddList taskDispatch={taskDispatch} />
       <DragDropContext onDragEnd={onDragEnd}>
         <Droppable droppableId="lists" direction="horizontal" type="panel">
           {(provided) => (
@@ -119,7 +120,7 @@ function TodoList() {
                       taskId={element.taskId}
                       listId={item.listId}
                       colorType={item.colorType}
-                      // taskDispatch={taskDispatch}
+                      taskDispatch={taskDispatch}
                     />
                   ))}
                 </Panel>
@@ -129,8 +130,8 @@ function TodoList() {
           )}
         </Droppable>
       </DragDropContext>
+       <SaveButton saveAll={saveAll}/>
       <Clock />
-      <button onClick={saveAll}>SAVE</button>
     </div>
   );
 }

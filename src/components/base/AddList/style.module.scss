@@ -1,8 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&display=swap");
 @import "../../../styles/mixins";
 
 .add-list {
-  margin: auto;
   min-width: 200px;
   @include flex-center;
   flex-wrap: wrap;
@@ -15,11 +13,6 @@
     width: 160px;
     padding: 10px 14px;
     margin: 0 10px;
-    font: {
-      size: 16px;
-      family: "Noto Sans TC", sans-serif;
-      weight: 500;
-    }
     &:focus {
       background-color: #ffffff;
       color: #2f363f;
