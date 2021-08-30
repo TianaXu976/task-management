@@ -2,7 +2,7 @@
 @import "../../../styles/variables";
 
 .panel {
-  min-width: 300px;
+  width: 300px;
   margin: 10px 10px ;
   font-weight: 400;
   .header {
@@ -45,11 +45,12 @@
   .add-item {
     margin-top: -1px;
     border-radius: 0px 0px 5px 5px;
-    padding: 10px 24px;
+    padding: 10px;
     display: flex;
     align-items: center;
 
     input {
+      width: 280px;
       height: 26px;
       &:hover {
         cursor: pointer;
