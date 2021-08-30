@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/task-management/static/css/main.5122cb2d.chunk.css",
+    "main.css": "/task-management/static/css/main.1cfb8018.chunk.css",
     "main.js": "/task-management/static/js/main.cbf519db.chunk.js",
     "main.js.map": "/task-management/static/js/main.cbf519db.chunk.js.map",
     "runtime-main.js": "/task-management/static/js/runtime-main.cfecb300.js",
@@ -10,14 +10,14 @@
     "static/js/3.a9512c51.chunk.js": "/task-management/static/js/3.a9512c51.chunk.js",
     "static/js/3.a9512c51.chunk.js.map": "/task-management/static/js/3.a9512c51.chunk.js.map",
     "index.html": "/task-management/index.html",
-    "static/css/main.5122cb2d.chunk.css.map": "/task-management/static/css/main.5122cb2d.chunk.css.map",
+    "static/css/main.1cfb8018.chunk.css.map": "/task-management/static/css/main.1cfb8018.chunk.css.map",
     "static/js/2.2b48350e.chunk.js.LICENSE.txt": "/task-management/static/js/2.2b48350e.chunk.js.LICENSE.txt",
     "static/media/main.scss": "/task-management/static/media/bgImg.7c28c6ca.jpeg"
   },
   "entrypoints": [
     "static/js/runtime-main.cfecb300.js",
     "static/js/2.2b48350e.chunk.js",
-    "static/css/main.5122cb2d.chunk.css",
+    "static/css/main.1cfb8018.chunk.css",
     "static/js/main.cbf519db.chunk.js"
   ]
 }
