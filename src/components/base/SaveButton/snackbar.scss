@@ -1,9 +1,9 @@
 .toast.MuiSnackbar-root{
   position: absolute ;
+  bottom: -60px;
 }
 
 .MuiSnackbarContent-root{
-  margin-top: 10px;
   display: flex;
   justify-content: center;
   min-width: 200px;

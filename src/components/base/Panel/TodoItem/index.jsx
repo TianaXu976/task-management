@@ -7,7 +7,7 @@ import { MdDelete, MdModeEdit } from "react-icons/md";
 import { Draggable } from "react-beautiful-dnd";
 
 // utils
-import { TASK_ACTION } from "../../../TodoList/useTaskReducer";
+import { TASK_ACTION } from "@/TodoList/useTaskReducer";
 import PropTypes from "prop-types";
 
 const cx = classnames.bind(styles);

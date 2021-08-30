@@ -67,6 +67,7 @@ export default function Panel(props) {
       });
     }
     taskRef.current.value = '';
+    taskRef.current.blur();
   };
 
 

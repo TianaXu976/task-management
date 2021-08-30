@@ -25,7 +25,7 @@ export default function SaveButton({ saveAll }) {
     <div className={cx("save")}>
       <button onClick={handleSave}>Save</button>
       <Snackbar className={cx("toast")}
-        anchorOrigin={{ vertical: "center", horizontal: "center" }}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
         open={open}
         onClose={() => setOpen(false)}
         autoHideDuration={1000}

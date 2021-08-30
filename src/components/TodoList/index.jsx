@@ -1,11 +1,11 @@
-import React, { useReducer, useEffect } from "react";
+import React, { useEffect } from "react";
 import classnames from "classnames/bind";
 import styles from "./style.module.scss";
 
 // components
 import Clock from "../base/Clock";
 import AddList from "../base/AddList";
-import Panel from "@/components/base/Panel";
+import Panel from "@/base/Panel";
 import SaveButton from "../base/SaveButton"
 
 // lib
