@@ -6,7 +6,7 @@ import styles from "./style.module.scss";
 import Clock from "../base/Clock";
 import AddList from "../base/AddList";
 import Panel from "@/base/Panel";
-import SaveButton from "../base/SaveButton"
+import SaveButton from "../base/SaveButton";
 
 // lib
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
@@ -18,9 +18,9 @@ const cx = classnames.bind(styles);
 
 function TodoList() {
   const [taskInfo, taskDispatch] = useTaskReducer();
-  // const [taskInfo, taskDispatch] = useReducer(taskReducer, initialState);
 
-  // console.log(taskInfo);
+  console.log(taskInfo);
+  console.log(localStorage);
 
   const onDragEnd = (dragInfo) => {
     const { destination, source, type } = dragInfo;
@@ -86,10 +86,12 @@ function TodoList() {
   };
 
   useEffect(() => {
-    taskDispatch({
-      type: LIST_ACTION.INITIAL_STATE,
-      payload: JSON.parse(localStorage.getItem("board")),
-    });
+    if (localStorage.length) {
+      taskDispatch({
+        type: LIST_ACTION.INITIAL_STATE,
+        payload: JSON.parse(localStorage.getItem("board")),
+      });
+    }
   }, [taskDispatch]);
 
   return (
@@ -130,7 +132,7 @@ function TodoList() {
           )}
         </Droppable>
       </DragDropContext>
-       <SaveButton saveAll={saveAll}/>
+      <SaveButton saveAll={saveAll} />
       <Clock />
     </div>
   );

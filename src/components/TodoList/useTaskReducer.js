@@ -1,7 +1,7 @@
 import { useReducer } from "react";
 
 const initialState = {
-  allList: [{ listTitle: "已完成", listId: "001", colorType: "red" }],
+  allList: [{ listTitle: "已完成", listId: "001", colorType: "green" }],
   tasks: {
     "001": [{ taskTitle: "打疫苗", taskId: "0011" }],
   },
@@ -95,6 +95,7 @@ const taskReducer = (taskInfo, action) => {
 
 export default function useTaskReducer() {
   const [taskInfo, taskDispatch] = useReducer(taskReducer, initialState);
+  console.log("hi")
 
   return  [taskInfo, taskDispatch];
 }
