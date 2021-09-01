@@ -25,6 +25,7 @@
     }
     input {
       height: 26px;
+      width: 200px;
     }
   }
   .body {
@@ -50,7 +51,7 @@
     align-items: center;
 
     input {
-      width: 280px;
+      width: 200px;
       height: 26px;
       &:hover {
         cursor: pointer;
