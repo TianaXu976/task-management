@@ -95,7 +95,6 @@ const taskReducer = (taskInfo, action) => {
 
 export default function useTaskReducer() {
   const [taskInfo, taskDispatch] = useReducer(taskReducer, initialState);
-  console.log("hi")
 
-  return  [taskInfo, taskDispatch];
+  return [taskInfo, taskDispatch];
 }

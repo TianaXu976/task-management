@@ -19,9 +19,6 @@ const cx = classnames.bind(styles);
 function TodoList() {
   const [taskInfo, taskDispatch] = useTaskReducer();
 
-  console.log(taskInfo);
-  console.log(localStorage);
-
   const onDragEnd = (dragInfo) => {
     const { destination, source, type } = dragInfo;
 
