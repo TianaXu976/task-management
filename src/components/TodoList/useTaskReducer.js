@@ -1,11 +1,14 @@
 import { useReducer } from "react";
 
 const initialState = {
-  allList: [{ listTitle: "已完成", listId: "001", colorType: "green" }],
+  allList: [{ listTitle: "待辦事項", listId: "001", colorType: "red" }, { listTitle: "已完成", listId: "002", colorType: "green" }],
   tasks: {
-    "001": [{ taskTitle: "打疫苗", taskId: "0011" }],
+    "001": [{ taskTitle: "健身", taskId: "0011" }, { taskTitle: "換貓砂", taskId: "0012" }],
+    "002": [{ taskTitle: "打疫苗", taskId: "0021" }]
   },
 };
+
+
 
 export const LIST_ACTION = {
   INITIAL_STATE: "initialState",
@@ -95,6 +98,5 @@ const taskReducer = (taskInfo, action) => {
 
 export default function useTaskReducer() {
   const [taskInfo, taskDispatch] = useReducer(taskReducer, initialState);
-
   return [taskInfo, taskDispatch];
 }
