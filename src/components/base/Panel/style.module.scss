@@ -38,9 +38,11 @@
     padding-top: 16px;
     margin-top: -1px;
     overflow: scroll;
+    overflow-x: hidden;
     &::-webkit-scrollbar {
       display: none;
     }
+    scrollbar-width: none;
   }
 
   .add-item {

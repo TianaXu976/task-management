@@ -28,11 +28,10 @@ function TodoList() {
 
     if (type === "panel") {
       const panelList = [...taskInfo.allList];
+      const dragItem = { ...panelList[source.index] };
 
-      [panelList[source.index], panelList[destination.index]] = [
-        panelList[destination.index],
-        panelList[source.index],
-      ];
+      panelList.splice(source.index, 1);
+      panelList.splice(destination.index, 0, dragItem);
 
       taskDispatch({
         type: LIST_ACTION.MOVE_LIST,
@@ -53,10 +52,10 @@ function TodoList() {
     const targetList = [...taskInfo.tasks[destination.droppableId]];
 
     if (destination.droppableId === source.droppableId) {
-      [sourceList[source.index], sourceList[destination.index]] = [
-        sourceList[destination.index],
-        sourceList[source.index],
-      ];
+      const dragItem = { ...sourceList[source.index] };
+      
+      sourceList.splice(source.index, 1);
+      sourceList.splice(destination.index, 0, dragItem);
 
       taskDispatch({
         type: TASK_ACTION.MOVE_TASK,
